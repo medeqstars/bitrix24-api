@@ -9,7 +9,7 @@
             "homepage": "https://medeqstars.ru"
         }
     ],
-    "homepage": "https://gitlab.com/medeq/bitrix24",
+    "homepage": "https://github.com/medeqstars/bitrix24-api",
     "keywords": ["Laravel", "Bitrix24"],
     "require": {
         "illuminate/support": "~5|~6",
@@ -24,11 +24,6 @@
     "autoload": {
         "psr-4": {
             "Medeq\\Bitrix24\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Medeq\\Bitrix24\\Tests\\": "tests"
         }
     },
     "extra": {
