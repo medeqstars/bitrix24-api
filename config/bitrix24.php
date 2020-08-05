@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'domain' => '',
-    'user_id' => '',
-    'token' => '',
+    'domain' => env('BITRIX24_DOMAIN'),
+    'user_id' => env('BITRIX24_TOKEN'),
+    'token' => env('BITRIX24_USER_ID'),
 ];

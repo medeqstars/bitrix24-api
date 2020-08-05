@@ -2,7 +2,6 @@
 
 namespace Medeq\Bitrix24;
 
-use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
 class Bitrix24ServiceProvider extends ServiceProvider
