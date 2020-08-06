@@ -35,17 +35,14 @@ class Bitrix24
 
         $params = $this->array_change_key_case_recursive($params, CASE_UPPER);
 
-        try {
-            $response = $this->client->post($url, [
-                'form_params' => $params
-            ]);
-            $response = json_decode($response->getBody(), true);
-            $response = $this->array_change_key_case_recursive($response, CASE_LOWER);
-            return $response;
-        }
-        catch (BadResponseException $e) {
-            return null;
-        }
+        $response = $this->client->post($url, [
+            'form_params' => $params
+        ]);
+
+        $response = json_decode($response->getBody(), true);
+        $response = $this->array_change_key_case_recursive($response, CASE_LOWER);
+
+        return $response;
     }
 
     public function batch(string $path, array $params)
