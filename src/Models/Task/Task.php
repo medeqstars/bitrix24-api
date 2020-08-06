@@ -5,6 +5,7 @@ namespace Medeq\Bitrix24\Models\Task;
 
 
 use Medeq\Bitrix24\Models\Model;
+use Medeq\Bitrix24\src\Models\Task\Builder;
 
 /**
  * Class Task
@@ -15,6 +16,8 @@ use Medeq\Bitrix24\Models\Model;
  */
 class Task extends Model
 {
+    protected $builder = Builder::class;
+
     public function paths(): array
     {
         return [

@@ -94,11 +94,15 @@ class Bitrix24
 
     protected function array_change_key_case_recursive(array $data, $case = CASE_UPPER) : array
     {
+        $excluded = ['fields'];
+
         $attributes = [];
 
         foreach ($data as $key => $value) {
 
-            $key = $case == CASE_UPPER ? mb_strtoupper($key) : mb_strtolower($key);
+            if(!in_array($key, $excluded)) {
+                $key = $case == CASE_UPPER ? mb_strtoupper($key) : mb_strtolower($key);
+            }
 
             if (is_array($value)) {
                 $attributes[$key] = $this->array_change_key_case_recursive($value, $case);
